@@ -55,7 +55,7 @@ onMounted(() => {
         <meta name="twitter:image" content="https://mih.cl/img/logo-black.svg" />
 
         <!-- Datos Estructurados JSON-LD (SEO Local Business) -->
-        <script type="application/ld+json">
+        <component is="script" type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "LogisticsService",
@@ -72,7 +72,7 @@ onMounted(() => {
           },
           "description": "Servicios de coordinación logística, aduanera y operaciones portuarias en Chile."
         }
-        </script>
+        </component>
     </Head>
 
     <div class="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 font-sans antialiased selection:bg-[#f59d02] selection:text-slate-900 transition-colors duration-300"
