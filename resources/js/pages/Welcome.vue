@@ -230,6 +230,7 @@ onMounted(() => {
                     <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-2">Infraestructura Tecnológica</p>
                     <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">Seguridad y control en zona primaria.</h3>
                 </div>
+                </div>
             </div>
         </section>
 
