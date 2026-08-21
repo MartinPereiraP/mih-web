@@ -3,6 +3,18 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
 ## [Sin liberar]
+### Añadido
+- **Cobertura Aduanera:** Se incorporaron los puertos y pasos fronterizos de Arica (Chacalluta), Talcahuano, San Vicente, Lirquén, Coronel y Cardenal Samoré en el footer de la plataforma.
+- **Grilla Fotográfica Multimodal:** Nueva galería tipo *Masonry* en la sección Operaciones, con imágenes exclusivas para los tráficos Marítimo, Terrestre y Aéreo.
+
+### Cambiado
+- **Terminología Técnica:** Se estandarizó el concepto de transporte a "Tráfico" (Marítimo, Terrestre, Aéreo) alineándose al Anexo 51 de la Ordenanza de Aduanas.
+- **Mensaje IT:** El copy de Infraestructura Tecnológica fue refactorizado a un formato minimalista centrado en integraciones B2B vía API RESTful y EDI.
+
+### Eliminado
+- **Bloat Visual:** Se eliminaron banners intermedios redundantes y el efecto de desenfoque (`backdrop-blur`) que afectaba la nitidez fotográfica en los fondos fijos.
+
+
 
 ### Añadido
 - **Legal:** Se incorporó el archivo de Licencia Comercial (2016-2026), reafirmando el software como propietario para MIH SpA.

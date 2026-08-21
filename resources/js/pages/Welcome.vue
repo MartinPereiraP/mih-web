@@ -120,6 +120,7 @@ onMounted(() => {
                         <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         Soporte Operativo Activo · Nodos Portuarios
                     </div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-3">Equipo profesional con más de 20 años de trayectoria logística.</p>
                     <h1 class="text-5xl font-semibold tracking-tighter sm:text-6xl xl:text-[76px] leading-[1.05] text-slate-900 dark:text-white">
                         Precisión documental.<br/>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f59d02] to-amber-400">Ejecución perfecta.</span>
@@ -134,6 +135,12 @@ onMounted(() => {
                         <a href="#servicios" class="rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 px-8 py-3.5 text-center text-[15px] font-medium text-slate-900 dark:text-white shadow-sm transition-all hover:scale-[1.02] hover:bg-slate-50 dark:hover:bg-white/10">
                             Descubrir Servicios
                         </a>
+                    </div>
+                    <div class="flex items-center gap-2 mt-6 justify-center lg:justify-start">
+                        <svg class="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Operando bajo estricto cumplimiento de la nueva <strong class="text-slate-700 dark:text-slate-200 font-semibold">Ley 21.719 de Protección de Datos</strong></span>
                     </div>
                 </div>
 
@@ -184,16 +191,37 @@ onMounted(() => {
         <section id="operaciones" class="py-28 lg:py-40 transition-colors duration-500 relative">
             <div class="mx-auto max-w-7xl px-6 sm:px-8">
                 <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
-                    <div class="relative group">
-                        <div class="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#f59d02] to-amber-600 opacity-20 blur-lg group-hover:opacity-30 transition-opacity"></div>
-                        <div class="relative overflow-hidden rounded-[2rem] border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-2xl shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:shadow-[0_20px_40px_rgb(0,0,0,0.3)] group">
-                            <div class="absolute inset-0 opacity-30 dark:opacity-20 pointer-events-none mix-blend-overlay group-hover:opacity-50 transition-opacity duration-500" style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #94a3b8 1px; --tw-gradient-to: transparent 1px; background-size: 16px 16px;"></div>
-                            <img src="/img/operaciones.jpg" alt="Supervisión en Puerto" class="w-full object-cover aspect-[16/10] opacity-95 transition-all duration-500 group-hover:scale-[1.01]">
-                            <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent dark:from-slate-950/90"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-950 bg-[#f59d02] px-2.5 py-1 rounded">Control de Cadena Logística</span>
-                                <h4 class="text-lg font-bold mt-2">Presencia directa en los terminales del país</h4>
+                    <div class="relative">
+                        <div class="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#f59d02] to-amber-600 opacity-10 blur-xl"></div>
+                        <div class="relative grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="col-span-1 row-span-2 relative overflow-hidden rounded-3xl border border-slate-200/50 dark:border-white/10 shadow-md group h-[400px]">
+                                <img src="/img/operaciones.jpg" alt="Operaciones Marítimas" class="w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                                <div class="absolute bottom-4 left-5">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#f59d02]">Tráfico</span>
+                                    <h4 class="text-white font-semibold text-lg">Marítima</h4>
+                                </div>
                             </div>
+
+                            <div class="col-span-1 relative overflow-hidden rounded-3xl border border-slate-200/50 dark:border-white/10 shadow-md group h-[192px]">
+                                <img src="/img/terrestrial.jpg" alt="Operaciones Terrestres" class="w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                                <div class="absolute bottom-4 left-5">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#f59d02]">Tráfico</span>
+                                    <h4 class="text-white font-semibold text-base">Terrestre</h4>
+                                </div>
+                            </div>
+
+                            <div class="col-span-1 relative overflow-hidden rounded-3xl border border-slate-200/50 dark:border-white/10 shadow-md group h-[192px]">
+                                <img src="/img/aerial.jpg" alt="Operaciones Aéreas" class="w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                                <div class="absolute bottom-4 left-5">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#f59d02]">Tráfico</span>
+                                    <h4 class="text-white font-semibold text-base">Aérea</h4>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -222,13 +250,14 @@ onMounted(() => {
         </section>
 
         <section class="relative h-[50vh] bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('/img/hero-bg.jpg');">
-            <div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-950/75 backdrop-blur-[2px]"></div>
+            <div class="absolute inset-0 bg-slate-100/40 dark:bg-slate-950/70"></div>
             <div class="absolute inset-0 flex items-center justify-center text-center px-4">
                 <div class="relative overflow-hidden max-w-2xl border border-white/20 bg-white/60 dark:bg-black/40 backdrop-blur-3xl p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
                 <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #ffffff 1.5px; --tw-gradient-to: transparent 1.5px; background-size: 16px 16px;"></div>
                 <div class="relative z-10">
                     <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-2">Infraestructura Tecnológica</p>
-                    <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">Seguridad y control en zona primaria.</h3>
+                    <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">Conectividad B2B y automatización de datos.</h3>
+                    <p class="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-medium leading-relaxed">Transmisión EDI y API RESTful. Sincronización directa y segura con su ERP.</p>
                 </div>
                 </div>
             </div>
@@ -240,7 +269,7 @@ onMounted(() => {
                     <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Estructura de Servicios</span>
                     <h2 class="text-4xl font-semibold tracking-tighter sm:text-5xl">Nuestras líneas de acción.</h2>
                     <p class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                        Soluciones integrales diseñadas con estricto apego a las normativas de aduana y logística portuaria chilena.
+                        Soluciones integrales diseñadas con estricto apego a las normativas de aduanas y logísticas portuarias chilenas.
                     </p>
                 </div>
 
@@ -253,9 +282,9 @@ onMounted(() => {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold tracking-tight mt-6">Gestión Documental Completa</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Operaciones de Exportación</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                            Confección, revisión y tramitación experta de la documentación necesaria ante el Servicio Nacional de Aduanas y entidades portuarias.
+                            Gestión documental ágil y precisa. Tramitación de DUS, visaciones y entrega final del set de documentos para asegurar su embarque.
                         </p>
                         </div>
                     </div>
@@ -268,9 +297,9 @@ onMounted(() => {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold tracking-tight mt-6">Coordinación en Zona Primaria</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Operaciones de Importación</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                            Presencia directa en los patios de acopio. Supervisamos aforos, revisiones del SAG/Sernapesca y velamos por la integridad física de los sellos.
+                            Control total en zona primaria. Coordinamos destinaciones aduaneras, aforos e inspecciones SAG/Sernapesca velando por la integridad de sus cargas.
                         </p>
                         </div>
                     </div>
@@ -283,9 +312,9 @@ onMounted(() => {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold tracking-tight mt-6">Reportería & Información</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Ecosistema Digital Integrado</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                            Creación de reportes diarios consolidados del estado de sus despachos para mantener informada a toda su cadena de distribución.
+                            Trazabilidad 24/7. Acceso en tiempo real a carpetas digitales y reportes, operando bajo el estricto marco de la nueva Ley 21.719 de Protección de Datos.
                         </p>
                         </div>
                     </div>
@@ -315,6 +344,28 @@ onMounted(() => {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             <span>Fono Operaciones: 032-3423242</span>
+                        </div>
+                        <div class="flex items-start gap-3 pt-2">
+                            <svg class="h-5 w-5 text-[#f59d02] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            <div class="flex flex-col w-full">
+                                <span class="font-medium text-slate-900 dark:text-white mb-2">Presencia en Zonas Primarias (Marítimas, Terrestres y Aéreas):</span>
+                                <div class="flex flex-wrap gap-1.5 mt-1">
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Arica (Chacalluta)</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-[#f59d02]/10 border border-[#f59d02]/20 text-[10px] font-semibold text-[#f59d02] uppercase tracking-wider">Valparaíso (Matriz & ZEAL)</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Coquimbo</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">San Antonio</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Los Andes</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Pino Hachado</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-sky-500/10 border border-sky-500/20 text-[10px] font-semibold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Aeropuerto SCL</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Cardenal Samoré</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Talcahuano</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">San Vicente</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Lirquén</span>
+                                    <span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Coronel</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
