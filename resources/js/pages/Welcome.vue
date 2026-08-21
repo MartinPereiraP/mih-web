@@ -112,7 +112,7 @@ onMounted(() => {
         </header>
 
         <main class="relative z-10">
-        <section class="relative pt-28 pb-24 lg:pt-40 lg:pb-36 overflow-hidden transition-all duration-500">
+        <section class="relative pt-16 pb-24 lg:pt-28 lg:pb-36 overflow-hidden transition-all duration-500">
 
             <div class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center relative z-10">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
