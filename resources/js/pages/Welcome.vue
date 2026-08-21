@@ -47,10 +47,6 @@ onMounted(() => {
                 <div class="flex items-center gap-3">
                     <img src="/img/logo-black.svg" alt="MIH" class="h-11 w-auto object-contain block dark:hidden">
                     <img src="/img/logo-white.svg" alt="MIH" class="h-11 w-auto object-contain hidden dark:block">
-
-                    <div class="hidden sm:block border-l border-slate-300 dark:border-slate-700 pl-3">
-                        <span class="text-xs font-bold tracking-widest text-[#f59d02] uppercase">Agencia de Embarques</span>
-                    </div>
                 </div>
 
                 <nav class="hidden md:flex items-center gap-8">
