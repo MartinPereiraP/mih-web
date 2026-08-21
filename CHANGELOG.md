@@ -4,10 +4,12 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 
 ## [Sin liberar]
 ### Añadido
+- **Navegación Vertical:** Botón flotante dinámico de *Scroll-to-Top* para facilitar el retorno al inicio en la *landing page*.
 - **Cobertura Aduanera:** Se incorporaron los puertos y pasos fronterizos de Arica (Chacalluta), Talcahuano, San Vicente, Lirquén, Coronel y Cardenal Samoré en el footer de la plataforma.
 - **Grilla Fotográfica Multimodal:** Nueva galería tipo *Masonry* en la sección Operaciones, con imágenes exclusivas para los tráficos Marítimo, Terrestre y Aéreo.
 
 ### Cambiado
+- **Animaciones UI:** Refactorización de las transiciones CSS de los modales legales. Se suavizó la curva de animación (*cubic-bezier*) y se ajustó la posición de aparición hacia el marco superior de la pantalla.
 - **Ajustes de Layout:** Se redujo el margen superior de la sección principal (Hero) para acercar el contenido al Header y eliminar el exceso de espacio en blanco.
 - **Diseño de Footer:** Se consolidó la firma de Copyright y el año de fundación (2016) en el bloque principal del isotipo, eliminando redundancias visuales en el área de enlaces legales.
 - **Identidad SEO y Copywriting:** Se calibró la redacción del sitio para reflejar con exactitud el rol de "Gestión Documental y Operaciones Portuarias", delimitando la responsabilidad frente a servicios logísticos físicos puros.

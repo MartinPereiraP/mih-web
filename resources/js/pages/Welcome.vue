@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const isDark = ref(false);
 const activeModal = ref<'none' | 'privacy' | 'terms'>('none');
@@ -17,7 +17,19 @@ const toggleDark = () => {
     localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
 };
 
+
+const showScrollTop = ref(false);
+
+const handleScroll = () => {
+    showScrollTop.value = window.scrollY > 300;
+};
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         isDark.value = true;
@@ -32,6 +44,9 @@ onMounted(() => {
     if (!localStorage.getItem('cookies_accepted')) {
         setTimeout(() => { showCookieBanner.value = true; }, 1500);
     }
+});
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -462,7 +477,7 @@ onMounted(() => {
 
         <!-- Modal Legal -->
         <transition name="modal">
-            <div v-if="activeModal !== 'none'" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div v-if="activeModal !== 'none'" class="fixed inset-0 z-[100] flex items-start justify-center pt-24 pb-4 px-4 sm:px-6" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <!-- Fondo Oscuro -->
             <div class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm transition-opacity" @click="activeModal = 'none'"></div>
 
@@ -524,13 +539,13 @@ html { scroll-behavior: smooth; }
 /* Animaciones del Modal Legal */
 .modal-enter-active,
 .modal-leave-active {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 .modal-enter-active .modal-content {
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .modal-leave-active .modal-content {
-    transition: all 0.2s ease-in;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .modal-enter-from,
 .modal-leave-to {
@@ -538,10 +553,19 @@ html { scroll-behavior: smooth; }
 }
 .modal-enter-from .modal-content {
     opacity: 0;
-    transform: translateY(20px) scale(0.95);
+    transform: translateY(-20px) scale(0.97);
 }
 .modal-leave-to .modal-content {
     opacity: 0;
-    transform: translateY(10px) scale(0.98);
+    transform: translateY(-10px) scale(0.99);
+}
+
+/* Scroll to top button */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
