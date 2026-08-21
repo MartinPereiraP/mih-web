@@ -37,9 +37,9 @@ onMounted(() => {
 
 <template>
     <Head>
-        <title>Agencia de Embarques MIH | Comercio Exterior & Operaciones Portuarias</title>
-        <meta name="description" content="Agencia de Embarques MIH SpA. Coordinación física y documental con precisión exacta. Operaciones aduaneras, portuarias y logísticas en Valparaíso y todo Chile." />
-        <meta name="keywords" content="agencia de embarques, comercio exterior, operaciones portuarias, aduanas, logística, Valparaíso, Chile, MIH, Agentes de Aduana, SAG" />
+        <title>Agencia de Embarques MIH | Gestión Documental y Operaciones Portuarias</title>
+        <meta name="description" content="Agencia de Embarques MIH. Especialistas en gestión documental de comercio exterior, tramitación aduanera y operaciones portuarias en Chile." />
+        <meta name="keywords" content="agencia de embarques, comercio exterior, gestión documental, operaciones portuarias, aduanas, logística, Valparaíso, Chile, MIH" />
         
         <!-- Open Graph / Redes Sociales -->
         <meta property="og:type" content="website" />
@@ -70,7 +70,7 @@ onMounted(() => {
             "addressLocality": "Valparaíso",
             "addressCountry": "CL"
           },
-          "description": "Servicios de coordinación logística, aduanera y operaciones portuarias en Chile."
+          "description": "Servicios de gestión documental, coordinación aduanera y operaciones de comercio exterior en Chile."
         }
         </component>
     </Head>
@@ -104,7 +104,7 @@ onMounted(() => {
                         </svg>
                     </button>
 
-                    <a href="/login" class="inline-flex items-center justify-center rounded-full bg-slate-900 dark:bg-white px-5 py-2 text-[13px] font-semibold text-white dark:text-slate-900 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_0_rgba(255,255,255,0.05)] transition-all hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_6px_20px_rgba(255,255,255,0.1)]">
+                    <a href="https://mihsystem.cl" target="_blank" class="inline-flex items-center justify-center rounded-full bg-slate-900 dark:bg-white px-5 py-2 text-[13px] font-semibold text-white dark:text-slate-900 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_0_rgba(255,255,255,0.05)] transition-all hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_6px_20px_rgba(255,255,255,0.1)]">
                         Plataforma Clientes
                     </a>
                 </nav>
@@ -120,13 +120,13 @@ onMounted(() => {
                         <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         Soporte Operativo Activo · Nodos Portuarios
                     </div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-3">Equipo profesional con más de 20 años de trayectoria logística.</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-3">Equipo profesional con más de 20 años de trayectoria en tramitación aduanera y gestión de comercio exterior.</p>
                     <h1 class="text-5xl font-semibold tracking-tighter sm:text-6xl xl:text-[76px] leading-[1.05] text-slate-900 dark:text-white">
                         Precisión documental.<br/>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f59d02] to-amber-400">Ejecución perfecta.</span>
                     </h1>
                     <p class="text-lg sm:text-xl text-slate-500 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed tracking-tight">
-                        Supervisamos el flujo crítico documental y logístico en los principales terminales de Chile, mitigando sobreestadías con trazabilidad absoluta.
+                        Supervisamos el flujo crítico documental y operativo en los principales terminales de Chile, asegurando una tramitación ágil y mitigando sobrecostos.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                         <a href="#contacto" class="rounded-full bg-[#f59d02] px-8 py-3.5 text-center text-[15px] font-medium text-white shadow-[0_8px_20px_rgba(245,157,2,0.3)] transition-all hover:scale-[1.02] hover:bg-[#e08f02]">
@@ -175,7 +175,7 @@ onMounted(() => {
                             </div>
 
                             <div class="pt-2">
-                                <a href="/login" class="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-[#f59d02]/30 dark:border-[#f59d02]/20 bg-[#f59d02]/5 dark:bg-[#f59d02]/5 py-3.5 text-[12px] font-mono font-bold text-[#f59d02] hover:text-[#f59d02] hover:bg-[#f59d02]/10 hover:border-[#f59d02]/60 transition-all shadow-sm">
+                                <a href="https://mihsystem.cl" target="_blank" class="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-[#f59d02]/30 dark:border-[#f59d02]/20 bg-[#f59d02]/5 dark:bg-[#f59d02]/5 py-3.5 text-[12px] font-mono font-bold text-[#f59d02] hover:text-[#f59d02] hover:bg-[#f59d02]/10 hover:border-[#f59d02]/60 transition-all shadow-sm">
                                     <svg class="h-4 w-4 text-[#f59d02]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                     </svg>
@@ -269,7 +269,7 @@ onMounted(() => {
                     <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Estructura de Servicios</span>
                     <h2 class="text-4xl font-semibold tracking-tighter sm:text-5xl">Nuestras líneas de acción.</h2>
                     <p class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                        Soluciones integrales diseñadas con estricto apego a las normativas de aduanas y logísticas portuarias chilenas.
+                        Soluciones integrales diseñadas con estricto apego a las normativas aduaneras y portuarias chilenas.
                     </p>
                 </div>
 
@@ -492,13 +492,13 @@ onMounted(() => {
                 <div class="overflow-y-auto p-6 text-sm text-slate-600 dark:text-slate-300 space-y-4">
                     <template v-if="activeModal === 'privacy'">
                         <p><strong>1. Responsable del Tratamiento:</strong> Agencia de Embarques MIH SpA, con domicilio en Almirante Señoret 70, Valparaíso.</p>
-                        <p><strong>2. Finalidad:</strong> La información recopilada mediante nuestros canales corporativos es utilizada exclusivamente para coordinar y ejecutar servicios aduaneros, portuarios y logísticos solicitados por nuestros clientes.</p>
+                        <p><strong>2. Finalidad:</strong> La información recopilada mediante nuestros canales corporativos es utilizada exclusivamente para coordinar y ejecutar servicios aduaneros, portuarios y documentales solicitados por nuestros clientes.</p>
                         <p><strong>3. Base Legal:</strong> El tratamiento se rige por la Ley N° 19.628 sobre Protección de la Vida Privada (actualizada por la Ley 21.719). Sus datos no serán cedidos a terceros, salvo requerimientos legales o aduaneros dictaminados por el Estado de Chile.</p>
                         <p><strong>4. Derechos ARCO:</strong> Usted puede ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición enviando un correo a <a href="mailto:contacto@mih.cl" class="text-[#f59d02] font-semibold hover:underline">contacto@mih.cl</a>.</p>
-                        <p><strong>5. Conservación:</strong> Los datos se almacenan en servidores seguros bajo altos estándares de la industria, durante el tiempo necesario para la prestación del servicio logístico y documental.</p>
+                        <p><strong>5. Conservación:</strong> Los datos se almacenan en servidores seguros bajo altos estándares de la industria, durante el tiempo necesario para la prestación del servicio de gestión documental y operativo.</p>
                     </template>
                     <template v-else>
-                        <p><strong>1. Alcance de los Servicios:</strong> Agencia de Embarques MIH actúa como coordinador logístico y documental en la tramitación de despachos de exportación e importación ante el Servicio Nacional de Aduanas.</p>
+                        <p><strong>1. Alcance de los Servicios:</strong> Agencia de Embarques MIH se especializa en la gestión documental y operativa para la tramitación de despachos de exportación e importación ante el Servicio Nacional de Aduanas.</p>
                         <p><strong>2. Responsabilidad Operativa:</strong> MIH asume la coordinación diligente de aforos y tramitaciones, pero no se hace responsable por retrasos, multas o bloqueos dictaminados de forma unilateral por SAG, Sernapesca, Aduana u otras autoridades fiscales/marítimas.</p>
                         <p><strong>3. Confidencialidad:</strong> Toda información comercial de sus despachos será tratada con estricta reserva por nuestro personal de oficina y terreno.</p>
                         <p><strong>4. Ajustes Tarifarios:</strong> Cualquier tarifa proyectada puede sufrir variaciones si las condiciones de la carga (pesos, dimensiones, sobreestadías) difieren de lo declarado inicialmente en la matriz documental.</p>

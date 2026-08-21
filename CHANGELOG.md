@@ -8,6 +8,8 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 - **Grilla Fotográfica Multimodal:** Nueva galería tipo *Masonry* en la sección Operaciones, con imágenes exclusivas para los tráficos Marítimo, Terrestre y Aéreo.
 
 ### Cambiado
+- **Identidad SEO y Copywriting:** Se calibró la redacción del sitio para reflejar con exactitud el rol de "Gestión Documental y Operaciones Portuarias", delimitando la responsabilidad frente a servicios logísticos físicos puros.
+- **Redirección de Plataforma:** Los botones de "Plataforma Clientes" ahora redirigen correctamente hacia el sistema operativo externo `https://mihsystem.cl`.
 - **Terminología Técnica:** Se estandarizó el concepto de transporte a "Tráfico" (Marítimo, Terrestre, Aéreo) alineándose al Anexo 51 de la Ordenanza de Aduanas.
 - **Mensaje IT:** El copy de Infraestructura Tecnológica fue refactorizado a un formato minimalista centrado en integraciones B2B vía API RESTful y EDI.
 
