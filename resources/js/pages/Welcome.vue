@@ -75,11 +75,15 @@ onMounted(() => {
         </component>
     </Head>
 
-    <div class="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 font-sans antialiased selection:bg-[#f59d02] selection:text-slate-900 transition-colors duration-300"
-         style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #cbd5e1 1px; --tw-gradient-to: transparent 1px; background-size: 32px 32px;"
-         :class="{'[--tw-gradient-from:#334155]': isDark, '[--tw-gradient-from:#cbd5e1]': !isDark}">
+    <div class="min-h-screen bg-[#fafafa] text-slate-900 dark:bg-[#050505] dark:text-slate-100 font-sans antialiased selection:bg-[#f59d02] selection:text-white transition-colors duration-500 relative overflow-hidden">
+        
+        <!-- Apple-style Ambient Glow -->
+        <div class="pointer-events-none absolute inset-0 overflow-hidden flex justify-center z-0">
+            <div class="w-[800px] h-[400px] bg-white dark:bg-[#f59d02] opacity-100 dark:opacity-[0.03] blur-[100px] rounded-full absolute -top-32 transition-all duration-700"></div>
+            <div class="w-[600px] h-[600px] bg-slate-100 dark:bg-[#f59d02] opacity-50 dark:opacity-[0.02] blur-[120px] rounded-full absolute -left-64 top-1/3 transition-all duration-700"></div>
+        </div>
          
-        <header class="sticky top-0 z-50 border-b border-slate-300 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors duration-300">
+        <header class="sticky top-0 z-50 border-b border-slate-200/60 dark:border-white/[0.04] bg-white/60 dark:bg-[#0a0a0a]/60 backdrop-blur-2xl transition-all duration-500">
             <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
                 <div class="flex items-center gap-3">
                     <img src="/img/logo-black.svg" alt="MIH" class="h-11 w-auto object-contain block dark:hidden">
@@ -87,11 +91,11 @@ onMounted(() => {
                 </div>
 
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#operaciones" class="text-sm font-semibold text-slate-600 dark:text-slate-300 transition-colors hover:text-[#f59d02] dark:hover:text-[#f59d02]">Operaciones</a>
-                    <a href="#servicios" class="text-sm font-semibold text-slate-600 dark:text-slate-300 transition-colors hover:text-[#f59d02] dark:hover:text-[#f59d02]">Servicios</a>
-                    <a href="#contacto" class="text-sm font-semibold text-slate-600 dark:text-slate-300 transition-colors hover:text-[#f59d02] dark:hover:text-[#f59d02]">Contacto</a>
+                    <a href="#operaciones" class="text-[13px] tracking-wide font-medium text-slate-500 dark:text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white">Operaciones</a>
+                    <a href="#servicios" class="text-[13px] tracking-wide font-medium text-slate-500 dark:text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white">Servicios</a>
+                    <a href="#contacto" class="text-[13px] tracking-wide font-medium text-slate-500 dark:text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white">Contacto</a>
 
-                    <button @click="toggleDark" class="rounded-lg p-2 border-2 border-slate-300 dark:border-slate-700 text-[#f59d02] hover:bg-[#f59d02]/10 transition-colors cursor-pointer flex items-center justify-center" title="Cambiar modo visual" type="button">
+                    <button @click="toggleDark" class="rounded-full p-2 border border-slate-200 dark:border-white/10 text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all cursor-pointer flex items-center justify-center" title="Cambiar modo visual" type="button">
                         <svg v-if="!isDark" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
@@ -100,42 +104,42 @@ onMounted(() => {
                         </svg>
                     </button>
 
-                    <a href="/login" class="inline-flex items-center justify-center rounded-lg bg-[#f59d02] px-6 py-2.5 text-sm font-bold text-slate-950 shadow-md shadow-[#f59d02]/30 transition-all hover:bg-[#d98502] hover:scale-[1.02]">
+                    <a href="/login" class="inline-flex items-center justify-center rounded-full bg-slate-900 dark:bg-white px-5 py-2 text-[13px] font-semibold text-white dark:text-slate-900 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_0_rgba(255,255,255,0.05)] transition-all hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_6px_20px_rgba(255,255,255,0.1)]">
                         Plataforma Clientes
                     </a>
                 </nav>
             </div>
         </header>
 
-        <main>
-        <section class="relative bg-white dark:bg-slate-950 pt-24 pb-24 lg:pt-36 lg:pb-36 overflow-hidden border-b border-slate-300 dark:border-slate-700 transition-colors duration-300">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,157,2,0.08),transparent_50%)]"></div>
+        <main class="relative z-10">
+        <section class="relative pt-28 pb-24 lg:pt-40 lg:pb-36 overflow-hidden transition-all duration-500">
 
             <div class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center relative z-10">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 px-4 py-1 text-xs font-bold text-[#f59d02]">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wide text-slate-600 dark:text-slate-300 shadow-sm">
                         <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         Soporte Operativo Activo · Nodos Portuarios
                     </div>
-                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl leading-[1.15]">
-                        Coordinación física y documental con <span class="text-[#f59d02] underline decoration-wavy decoration-2">precisión exacta</span>
+                    <h1 class="text-5xl font-semibold tracking-tighter sm:text-6xl xl:text-[76px] leading-[1.05] text-slate-900 dark:text-white">
+                        Precisión documental.<br/>
+                        <span class="text-slate-400 dark:text-slate-500">Ejecución perfecta.</span>
                     </h1>
-                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed tracking-wide">
-                        No dejamos su carga al azar. Supervisamos el flujo crítico documental y de terreno en los principales terminales de Chile, mitigando sobreestadías y garantizando trazabilidad total.
+                    <p class="text-lg sm:text-xl text-slate-500 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed tracking-tight">
+                        Supervisamos el flujo crítico documental y logístico en los principales terminales de Chile, mitigando sobreestadías con trazabilidad absoluta.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#contacto" class="rounded-lg bg-[#f59d02] px-7 py-4 text-center text-sm font-bold text-slate-950 shadow-lg shadow-[#f59d02]/30 transition-all hover:bg-[#d98502]">
-                            Asignar Nuevo Embarque
+                        <a href="#contacto" class="rounded-full bg-[#f59d02] px-8 py-3.5 text-center text-[15px] font-medium text-white shadow-[0_8px_20px_rgba(245,157,2,0.3)] transition-all hover:scale-[1.02] hover:bg-[#e08f02]">
+                            Comenzar Operación
                         </a>
-                        <a href="#servicios" class="rounded-lg border-2 border-slate-300 dark:border-slate-700 bg-white/40 dark:bg-slate-900/40 px-7 py-4 text-center text-sm font-bold transition-all hover:bg-slate-200 dark:hover:bg-slate-800">
-                            Ver Portafolio de Servicios
+                        <a href="#servicios" class="rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 px-8 py-3.5 text-center text-[15px] font-medium text-slate-900 dark:text-white shadow-sm transition-all hover:scale-[1.02] hover:bg-slate-50 dark:hover:bg-white/10">
+                            Descubrir Servicios
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
-                    <div class="relative rounded-2xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-2xl transition-colors duration-300">
-                        <div class="flex items-center justify-between border-b border-slate-300 dark:border-slate-700 pb-4 mb-4">
+                    <div class="relative rounded-3xl border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-colors duration-500">
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-4 mb-4">
                             <div class="flex items-center gap-2">
                                 <div class="h-3 w-3 rounded-full bg-[#f59d02]"></div>
                                 <div class="h-3 w-3 rounded-full bg-slate-400"></div>
@@ -147,7 +151,7 @@ onMounted(() => {
                         <div class="space-y-4">
                             <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Monitoreo de Servicios</p>
 
-                            <div class="rounded-lg border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950/50 p-4 flex items-center justify-between">
+                            <div class="rounded-2xl border border-slate-200/80 dark:border-white/5 bg-white/80 dark:bg-black/20 p-4 flex items-center justify-between shadow-sm">
                                 <div>
                                     <p class="text-xs font-bold font-mono">Tramitación Documental</p>
                                     <p class="text-[11px] font-medium text-slate-600 dark:text-slate-300 mt-0.5">Revisión de Carpetas / Visaciones</p>
@@ -155,7 +159,7 @@ onMounted(() => {
                                 <span class="rounded bg-[#f59d02]/10 px-2 py-1 text-[10px] font-bold text-[#f59d02] border border-[#f59d02]/30">Línea Operativa</span>
                             </div>
 
-                            <div class="rounded-lg border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950/50 p-4 flex items-center justify-between">
+                            <div class="rounded-2xl border border-slate-200/80 dark:border-white/5 bg-white/80 dark:bg-black/20 p-4 flex items-center justify-between shadow-sm">
                                 <div>
                                     <p class="text-xs font-bold font-mono">Inspección Física en Zona Primaria</p>
                                     <p class="text-[11px] font-medium text-slate-600 dark:text-slate-300 mt-0.5">Coordinación de Aforos y Sellos</p>
@@ -164,7 +168,7 @@ onMounted(() => {
                             </div>
 
                             <div class="pt-2">
-                                <a href="/login" class="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-dashed border-slate-300 dark:border-slate-700 py-3.5 text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-[#f59d02] dark:hover:text-[#f59d02] hover:border-[#f59d02]/60 dark:hover:border-[#f59d02]/60 transition-colors">
+                                <a href="/login" class="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 py-3.5 text-[13px] font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-sm">
                                     <svg class="h-4 w-4 text-[#f59d02]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                     </svg>
@@ -177,12 +181,12 @@ onMounted(() => {
             </div>
         </section>
 
-        <section id="operaciones" class="py-28 lg:py-40 border-b border-slate-300 dark:border-slate-700 transition-colors duration-300">
+        <section id="operaciones" class="py-28 lg:py-40 transition-colors duration-500 relative">
             <div class="mx-auto max-w-7xl px-6 sm:px-8">
                 <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
                     <div class="relative group">
                         <div class="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#f59d02] to-amber-600 opacity-20 blur-lg group-hover:opacity-30 transition-opacity"></div>
-                        <div class="relative overflow-hidden rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-2xl">
+                        <div class="relative overflow-hidden rounded-[2rem] border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-2xl shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:shadow-[0_20px_40px_rgb(0,0,0,0.3)]">
                             <img src="/img/operaciones.jpg" alt="Supervisión en Puerto" class="w-full object-cover aspect-[16/10] opacity-95 transition-all duration-500 group-hover:scale-[1.01]">
                             <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent dark:from-slate-950/90"></div>
                             <div class="absolute bottom-6 left-6 right-6">
@@ -193,8 +197,9 @@ onMounted(() => {
                     </div>
 
                     <div class="space-y-6">
-                        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl leading-tight">
-                            Un puente sólido entre la <span class="text-[#f59d02]">documentación</span> y el puerto
+                        <h2 class="text-4xl font-semibold tracking-tighter sm:text-5xl leading-[1.1]">
+                            Conexión perfecta.<br/>
+                            <span class="text-slate-400">Documento y puerto.</span>
                         </h2>
                         <p class="text-slate-600 dark:text-slate-300 font-medium text-sm sm:text-base leading-relaxed tracking-wide">
                             Heredamos la claridad informativa de nuestra plataforma tradicional. Separamos los procesos críticos para que tanto exportadores como importadores identifiquen el estado real de sus operaciones en aduana y zona primaria.
@@ -215,58 +220,58 @@ onMounted(() => {
             </div>
         </section>
 
-        <section class="relative h-[50vh] bg-cover bg-center bg-no-repeat bg-fixed border-y-2 border-slate-300 dark:border-slate-700" style="background-image: url('/img/hero-bg.jpg');">
+        <section class="relative h-[50vh] bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('/img/hero-bg.jpg');">
             <div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-950/75 backdrop-blur-[2px]"></div>
             <div class="absolute inset-0 flex items-center justify-center text-center px-4">
-                <div class="max-w-2xl border-2 border-[#f59d02] bg-white/95 dark:bg-slate-950/90 backdrop-blur-md p-8 rounded-xl shadow-2xl">
+                <div class="max-w-2xl border border-white/20 bg-white/60 dark:bg-black/40 backdrop-blur-3xl p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
                     <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-2">Infraestructura Tecnológica</p>
-                    <h3 class="text-xl sm:text-2xl font-bold">Seguridad y control operativo en zona primaria</h3>
+                    <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">Seguridad y control en zona primaria.</h3>
                 </div>
             </div>
         </section>
 
-        <section id="servicios" class="py-36 lg:py-48 border-b border-slate-300 dark:border-slate-700 transition-colors duration-300">
+        <section id="servicios" class="py-36 lg:py-48 transition-colors duration-500">
             <div class="mx-auto max-w-7xl px-6 sm:px-8">
                 <div class="text-center space-y-4 max-w-2xl mx-auto">
                     <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Estructura de Servicios</span>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Nuestras Líneas de Acción</h2>
+                    <h2 class="text-4xl font-semibold tracking-tighter sm:text-5xl">Nuestras líneas de acción.</h2>
                     <p class="text-sm font-medium text-slate-600 dark:text-slate-300">
                         Soluciones integrales diseñadas con estricto apego a las normativas de aduana y logística portuaria chilena.
                     </p>
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <div class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
-                        <div class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                    <div class="bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
+                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg font-bold mt-5">Gestión Documental Completa</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Gestión Documental Completa</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                             Confección, revisión y tramitación experta de la documentación necesaria ante el Servicio Nacional de Aduanas y entidades portuarias.
                         </p>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
-                        <div class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                    <div class="bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
+                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                             </svg>
                         </div>
-                        <h3 class="text-lg font-bold mt-5">Coordinación en Zona Primaria</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Coordinación en Zona Primaria</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                             Presencia directa en los patios de acopio. Supervisamos aforos, revisiones del SAG/Sernapesca y velamos por la integridad física de los sellos.
                         </p>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
-                        <div class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                    <div class="bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
+                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg font-bold mt-5">Reportería & Información</h3>
+                        <h3 class="text-xl font-semibold tracking-tight mt-6">Reportería & Información</h3>
                         <p class="text-xs font-medium text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                             Creación de reportes diarios consolidados del estado de sus despachos para mantener informada a toda su cadena de distribución.
                         </p>
@@ -275,11 +280,12 @@ onMounted(() => {
             </div>
         </section>
 
-        <section id="contacto" class="py-36 lg:py-48 transition-colors duration-300">
+        <section id="contacto" class="py-36 lg:py-48 transition-colors duration-500 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-100/50 dark:to-white/[0.02] pointer-events-none"></div>
             <div class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-2 items-start">
                 <div class="space-y-6">
                     <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Contacto Corporativo</span>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Comience a operar con nosotros</h2>
+                    <h2 class="text-4xl font-semibold tracking-tighter sm:text-5xl">Comience a operar.</h2>
                     <p class="text-sm font-medium text-slate-600 dark:text-slate-300 leading-relaxed tracking-wide">
                         Nuestras oficinas centrales están ubicadas estratégicamente en el centro financiero e histórico de Valparaíso, facilitando las gestiones directas ante las direcciones nacionales de control aduanero y portuario.
                     </p>
@@ -300,10 +306,10 @@ onMounted(() => {
                     </div>
                 </div>
 
-                <div class="rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-xl transition-colors duration-300 flex flex-col justify-center gap-6 text-center sm:text-left h-full">
+                <div class="rounded-[2rem] border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-2xl p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-colors duration-500 flex flex-col justify-center gap-6 text-center sm:text-left h-full">
                     <p class="text-sm font-bold text-slate-600 dark:text-slate-300 mb-2">Comuníquese directamente con Operaciones:</p>
                     
-                    <a href="mailto:contacto@mih.cl" class="flex items-center justify-center sm:justify-start gap-4 rounded-lg bg-slate-100 dark:bg-slate-900 px-6 py-4 transition-all hover:bg-slate-200 dark:hover:bg-slate-950 hover:scale-[1.02] border border-slate-300 dark:border-slate-700">
+                    <a href="mailto:contacto@mih.cl" class="flex items-center justify-center sm:justify-start gap-5 rounded-2xl bg-white dark:bg-white/5 px-6 py-5 transition-all hover:scale-[1.02] border border-slate-100 dark:border-white/5 shadow-sm hover:shadow-md">
                         <div class="h-10 w-10 rounded-full bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] shrink-0">
                             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -315,7 +321,7 @@ onMounted(() => {
                         </div>
                     </a>
 
-                    <a href="tel:+56323423242" class="flex items-center justify-center sm:justify-start gap-4 rounded-lg bg-slate-100 dark:bg-slate-900 px-6 py-4 transition-all hover:bg-slate-200 dark:hover:bg-slate-950 hover:scale-[1.02] border border-slate-300 dark:border-slate-700">
+                    <a href="tel:+56323423242" class="flex items-center justify-center sm:justify-start gap-5 rounded-2xl bg-white dark:bg-white/5 px-6 py-5 transition-all hover:scale-[1.02] border border-slate-100 dark:border-white/5 shadow-sm hover:shadow-md">
                         <div class="h-10 w-10 rounded-full bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] shrink-0">
                             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -332,7 +338,7 @@ onMounted(() => {
         </section>
         </main>
 
-                <footer class="bg-white dark:bg-slate-950/60 py-12 text-xs border-t-2 border-slate-300 dark:border-slate-700 transition-colors duration-300">
+                <footer class="bg-transparent py-12 text-[13px] border-t border-slate-200/60 dark:border-white/10 transition-colors duration-500 relative z-10">
             <div class="mx-auto max-w-7xl px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
                     <span class="font-bold tracking-tight">MIH</span>
