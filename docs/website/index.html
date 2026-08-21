@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth" id="html-tag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Embarques MIH | Comercio Exterior & Operaciones Portuarias</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Arquitectura de Cohesión Visual y Máximo Contraste (Theme Engine v4) */
+        :root {
+            --bg-main: #f1f5f9;
+            /* Slate 100 para dar mejor contraste de fondo */
+            --bg-card: #ffffff;
+            --bg-hero: #ffffff;
+            --text-main: #0f172a;
+            /* Slate 900: Texto principal ultra legible */
+            --text-muted: #475569;
+            /* Slate 600: Texto secundario con peso real */
+            --border-color: #cbd5e1;
+            /* Slate 300 para divisiones nítidas */
+            --theme-primary: #f59d02;
+            --theme-hover: #d98502;
+        }
+
+        [data-theme="dark"] {
+            --bg-main: #0f172a;
+            /* Slate 900 */
+            --bg-card: #1e293b;
+            /* Slate 800 */
+            --bg-hero: #020617;
+            /* Slate 950 */
+            --text-main: #f8fafc;
+            /* Slate 50 */
+            --text-muted: #cbd5e1;
+            /* Slate 300: Máxima legibilidad nocturna */
+            --border-color: #334155;
+            /* Slate 700 */
+        }
+
+        /* Lógica de intercambio de logos nativa */
+        :root[data-theme="light"] .logo-dark-only {
+            display: block;
+        }
+
+        :root[data-theme="light"] .logo-light-only {
+            display: none;
+        }
+
+        :root[data-theme="dark"] .logo-dark-only {
+            display: none;
+        }
+
+        :root[data-theme="dark"] .logo-light-only {
+            display: block;
+        }
+
+        /* Mapeo de Clases Utilitarias */
+        .dynamic-bg {
+            background-color: var(--bg-main);
+        }
+
+        .dynamic-card {
+            background-color: var(--bg-card);
+        }
+
+        .dynamic-hero {
+            background-color: var(--bg-hero);
+        }
+
+        .dynamic-text {
+            color: var(--text-main);
+        }
+
+        .dynamic-muted {
+            color: var(--text-muted);
+        }
+
+        .dynamic-border {
+            border-color: var(--border-color);
+        }
+
+        /* Trama sutil de fondo */
+        .grid-pattern {
+            background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+
+<body
+    class="dynamic-bg dynamic-text antialiased selection:bg-[#f59d02] selection:text-slate-900 transition-colors duration-300 grid-pattern">
+
+    <header
+        class="sticky top-0 z-50 border-b dynamic-border bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
+            <div class="flex items-center gap-3">
+                <img src="img/logo-2.svg" alt="MIH" class="logo-dark-only h-11 w-auto object-contain">
+                <img src="img/logo.svg" alt="MIH" class="logo-light-only h-11 w-auto object-contain">
+
+                <div class="hidden sm:block border-l dynamic-border pl-3">
+                    <span class="text-xs font-bold tracking-widest text-[#f59d02] uppercase">Agencia de Embarques</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#operaciones"
+                    class="text-sm font-semibold dynamic-muted transition-colors hover:text-[#f59d02]">Operaciones</a>
+                <a href="#servicios"
+                    class="text-sm font-semibold dynamic-muted transition-colors hover:text-[#f59d02]">Servicios</a>
+                <a href="#contacto"
+                    class="text-sm font-semibold dynamic-muted transition-colors hover:text-[#f59d02]">Contacto</a>
+
+                <button id="theme-toggle"
+                    class="rounded-lg p-2 border-2 dynamic-border text-[#f59d02] hover:bg-[#f59d02]/10 transition-colors cursor-pointer flex items-center justify-center"
+                    title="Cambiar modo visual" type="button">
+                    <svg id="theme-toggle-sun" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l.707-.707m12.022-12.022l.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z" />
+                    </svg>
+                    <svg id="theme-toggle-moon" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <a href="http://agenciadeembarques.mih.cl/clientes"
+                    class="inline-flex items-center justify-center rounded-lg bg-[#f59d02] px-6 py-2.5 text-sm font-bold text-slate-950 shadow-md shadow-[#f59d02]/30 transition-all hover:bg-[#d98502] hover:scale-[1.02]">
+                    Plataforma Clientes
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section
+        class="relative dynamic-hero pt-24 pb-24 lg:pt-36 lg:pb-36 overflow-hidden border-b dynamic-border transition-colors duration-300">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,157,2,0.08),transparent_50%)]">
+        </div>
+
+        <div
+            class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 rounded-full border-2 dynamic-border bg-white/80 dark:bg-slate-900/80 px-4 py-1 text-xs font-bold text-[#f59d02]">
+                    <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Soporte Operativo Activo · Nodos Portuarios
+                </div>
+                <h1 class="text-4xl font-extrabold tracking-tight dynamic-text sm:text-5xl xl:text-6xl leading-[1.15]">
+                    Coordinación física y documental con <span
+                        class="text-[#f59d02] underline decoration-wavy decoration-2">precisión exacta</span>
+                </h1>
+                <p
+                    class="text-base sm:text-lg dynamic-muted max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed tracking-wide">
+                    No dejamos su carga al azar. Supervisamos el flujo crítico documental y de terreno en los
+                    principales terminales de Chile, mitigando sobreestadías y garantizando trazabilidad total.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#contacto"
+                        class="rounded-lg bg-[#f59d02] px-7 py-4 text-center text-sm font-bold text-slate-950 shadow-lg shadow-[#f59d02]/30 transition-all hover:bg-[#d98502]">
+                        Asignar Nuevo Embarque
+                    </a>
+                    <a href="#servicios"
+                        class="rounded-lg border-2 dynamic-border bg-white/40 dark:bg-slate-900/40 px-7 py-4 text-center text-sm font-bold dynamic-text transition-all hover:bg-slate-200 dark:hover:bg-slate-800">
+                        Ver Portafolio de Servicios
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
+                <div
+                    class="relative rounded-2xl border-2 dynamic-border dynamic-card p-6 shadow-2xl transition-colors duration-300">
+                    <div class="flex items-center justify-between border-b dynamic-border pb-4 mb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="h-3 w-3 rounded-full bg-[#f59d02]"></div>
+                            <div class="h-3 w-3 rounded-full bg-slate-400"></div>
+                            <div class="h-3 w-3 rounded-full bg-slate-500"></div>
+                        </div>
+                        <span class="text-xs font-bold font-mono dynamic-muted">MIH_OPERATIONS_DESK</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Monitoreo de Servicios</p>
+
+                        <div
+                            class="rounded-lg border-2 dynamic-border bg-slate-50/50 dark:bg-slate-950/50 p-4 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold font-mono dynamic-text">Tramitación Documental</p>
+                                <p class="text-[11px] font-medium dynamic-muted mt-0.5">Revisión de Carpetas /
+                                    Visaciones</p>
+                            </div>
+                            <span
+                                class="rounded bg-[#f59d02]/10 px-2 py-1 text-[10px] font-bold text-[#f59d02] border border-[#f59d02]/30">Línea
+                                Operativa</span>
+                        </div>
+
+                        <div
+                            class="rounded-lg border-2 dynamic-border bg-slate-50/50 dark:bg-slate-950/50 p-4 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold font-mono dynamic-text">Inspección Física en Zona Primaria
+                                </p>
+                                <p class="text-[11px] font-medium dynamic-muted mt-0.5">Coordinación de Aforos y Sellos
+                                </p>
+                            </div>
+                            <span
+                                class="rounded bg-[#f59d02]/10 px-2 py-1 text-[10px] font-bold text-[#f59d02] border border-[#f59d02]/30">En
+                                Terreno</span>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="http://agenciadeembarques.mih.cl/clientes"
+                                class="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-dashed dynamic-border py-3.5 text-xs font-bold dynamic-muted hover:text-[#f59d02] hover:border-[#f59d02]/60 transition-colors">
+                                <svg class="h-4 w-4 text-[#f59d02]" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                                Ingresar al Sistema Corporativo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="operaciones" class="py-28 lg:py-40 border-b dynamic-border transition-colors duration-300">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8">
+            <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
+
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#f59d02] to-amber-600 opacity-20 blur-lg group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="relative overflow-hidden rounded-xl border-2 dynamic-border dynamic-card shadow-2xl">
+                        <img src="img/Diapositiva7.png" alt="Supervisión en Puerto"
+                            class="w-full object-cover aspect-[16/10] opacity-95 transition-all duration-500 group-hover:scale-[1.01]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent dark:from-slate-950/90">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-slate-950 bg-[#f59d02] px-2.5 py-1 rounded">Control
+                                de Cadena Logística</span>
+                            <h4 class="text-lg font-bold dynamic-text mt-2">Presencia directa en los terminales del país
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight dynamic-text sm:text-4xl leading-tight">
+                        Un puente sólido entre la <span class="text-[#f59d02]">documentación</span> y el puerto
+                    </h2>
+                    <p class="dynamic-muted font-medium text-sm sm:text-base leading-relaxed tracking-wide">
+                        Heredamos la claridad informativa de nuestra plataforma tradicional. Separamos los procesos
+                        críticos para que tanto exportadores como importadores identifiquen el estado real de sus
+                        operaciones en aduana y zona primaria.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                        <div class="border-l-4 border-[#f59d02] pl-4">
+                            <h4 class="text-sm font-bold dynamic-text uppercase tracking-wider">Respaldo Digital</h4>
+                            <p class="text-xs font-semibold dynamic-muted mt-1">Repositorio centralizado de carpetas de
+                                despacho escaneadas.</p>
+                        </div>
+                        <div class="border-l-4 border-[#f59d02] pl-4">
+                            <h4 class="text-sm font-bold dynamic-text uppercase tracking-wider">Mitigación de Riesgos
+                            </h4>
+                            <p class="text-xs font-semibold dynamic-muted mt-1">Evitamos multas por mala clasificación o
+                                retrasos aduaneros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative h-[50vh] bg-cover bg-center bg-no-repeat bg-fixed border-y-2 dynamic-border"
+        style="background-image: url('img/Diapositiva7.png');">
+        <div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-950/75 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+            <div
+                class="max-w-2xl border-2 border-[#f59d02] bg-white/95 dark:bg-slate-950/90 backdrop-blur-md p-8 rounded-xl shadow-2xl">
+                <p class="text-xs font-bold uppercase tracking-widest text-[#f59d02] mb-2">Infraestructura Tecnológica
+                </p>
+                <h3 class="text-xl sm:text-2xl font-bold dynamic-text">Seguridad y control operativo en zona primaria
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-36 lg:py-48 border-b dynamic-border transition-colors duration-300">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8">
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Estructura de Servicios</span>
+                <h2 class="text-3xl font-bold tracking-tight dynamic-text sm:text-4xl">Nuestras Líneas de Acción</h2>
+                <p class="text-sm font-medium dynamic-muted">
+                    Soluciones integrales diseñadas con estricto apego a las normativas de aduana y logística portuaria
+                    chilena.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+                <div
+                    class="dynamic-card border-2 dynamic-border rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
+                    <div
+                        class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold dynamic-text mt-5">Gestión Documental Completa</h3>
+                    <p class="text-xs font-medium dynamic-muted mt-2 leading-relaxed">
+                        Confección, revisión y tramitación experta de la documentación necesaria ante el Servicio
+                        Nacional de Aduanas y entidades portuarias.
+                    </p>
+                </div>
+
+                <div
+                    class="dynamic-card border-2 dynamic-border rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
+                    <div
+                        class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold dynamic-text mt-5">Coordinación en Zona Primaria</h3>
+                    <p class="text-xs font-medium dynamic-muted mt-2 leading-relaxed">
+                        Presencia directa en los patios de acopio. Supervisamos aforos, revisiones del SAG/Sernapesca y
+                        velamos por la integridad física de los sellos.
+                    </p>
+                </div>
+
+                <div
+                    class="dynamic-card border-2 dynamic-border rounded-xl p-6 hover:border-[#f59d02] transition-all group shadow-md">
+                    <div
+                        class="h-11 w-11 rounded-lg bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] group-hover:bg-[#f59d02] group-hover:text-slate-950 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold dynamic-text mt-5">Reportería & Información</h3>
+                    <p class="text-xs font-medium dynamic-muted mt-2 leading-relaxed">
+                        Creación de reportes diarios consolidados del estado de sus despachos para mantener informada a
+                        toda su cadena de distribución.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-36 lg:py-48 transition-colors duration-300">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-2 items-start">
+
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#f59d02]">Contacto Corporativo</span>
+                <h2 class="text-3xl font-bold tracking-tight dynamic-text sm:text-4xl">Comience a operar con nosotros
+                </h2>
+                <p class="text-sm font-medium dynamic-muted leading-relaxed tracking-wide">
+                    Nuestras oficinas centrales están ubicadas estratégicamente en el centro financiero e histórico de
+                    Valparaíso, facilitando las gestiones directas ante las direcciones nacionales de control aduanero y
+                    portuario.
+                </p>
+
+                <div class="space-y-4 pt-2 text-xs font-bold dynamic-muted font-mono">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-5 w-5 text-[#f59d02]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        </svg>
+                        <span>Almirante Señoret 70, Oficina 51, Valparaíso - Chile.</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <svg class="h-5 w-5 text-[#f59d02]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span>Fono Operaciones: 032-3423242</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-xl border-2 dynamic-border dynamic-card p-8 shadow-xl transition-colors duration-300">
+                <form class="space-y-5" method="POST" action="">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider text-[#f59d02]">Razón Social
+                            / Empresa</label>
+                        <input type="text" name="empresa" required
+                            class="mt-2 block w-full rounded-lg border-2 dynamic-border bg-white dark:bg-slate-950 px-4 py-3 text-xs font-semibold dynamic-text transition-all focus:border-[#f59d02] focus:outline-none focus:ring-1 focus:ring-[#f59d02]">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider dynamic-muted">Nombre de
+                                Contacto</label>
+                            <input type="text" name="contacto" required
+                                class="mt-2 block w-full rounded-lg border-2 dynamic-border bg-white dark:bg-slate-950 px-4 py-3 text-xs font-semibold dynamic-text transition-all focus:border-[#f59d02] focus:outline-none focus:ring-1 focus:ring-[#f59d02]">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider dynamic-muted">Correo
+                                Electrónico</label>
+                            <input type="email" name="email" required
+                                class="mt-2 block w-full rounded-lg border-2 dynamic-border bg-white dark:bg-slate-950 px-4 py-3 text-xs font-semibold dynamic-text transition-all focus:border-[#f59d02] focus:outline-none focus:ring-1 focus:ring-[#f59d02]">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase tracking-wider dynamic-muted">Detalle de
+                            Operación / Puerto</label>
+                        <textarea name="mensaje" rows="4" required
+                            class="mt-2 block w-full rounded-lg border-2 dynamic-border bg-white dark:bg-slate-950 px-4 py-3 text-xs font-semibold dynamic-text transition-all focus:border-[#f59d02] focus:outline-none focus:ring-1 focus:ring-[#f59d02] resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full rounded-lg bg-[#f59d02] py-4 text-xs font-bold text-slate-950 shadow-md transition-all hover:bg-[#d98502]">
+                        Transmitir Solicitud Operativa
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="bg-white dark:bg-slate-950/60 py-12 text-xs border-t-2 dynamic-border transition-colors duration-300">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="dynamic-text font-bold tracking-tight">MIH</span>
+                <span class="dynamic-muted font-medium">| Agencia de Embarques SpA</span>
+            </div>
+            <p class="font-bold dynamic-muted">&copy; 2026 Agencia de Embarques MIH. Conectado a Red Primaria Logística.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const root = document.documentElement;
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
+
+        function updateIcons(isDark) {
+            if (isDark) {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('color-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkInitial = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+
+        if (isDarkInitial) {
+            root.setAttribute('data-theme', 'dark');
+            updateIcons(true);
+        } else {
+            root.setAttribute('data-theme', 'light');
+            updateIcons(false);
+        }
+
+        themeToggleBtn.addEventListener('click', function () {
+            if (root.getAttribute('data-theme') === 'dark') {
+                root.setAttribute('data-theme', 'light');
+                localStorage.setItem('color-theme', 'light');
+                updateIcons(false);
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                localStorage.setItem('color-theme', 'dark');
+                updateIcons(true);
+            }
+        });
+    </script>
+</body>
+
+</html>

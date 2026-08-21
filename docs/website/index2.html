@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Embarques MIH | Logística y Comercio Exterior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="img/logo-mih.png" alt="MIH Logo Corporativo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="http://agenciadeembarques.mih.cl/clientes" class="btn-portal">Zona Clientes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">Operaciones Portuarias y Documentales</span>
+                <h1>Eficiencia integral en cada punto de embarque</h1>
+                <p>Controlamos, supervisamos y gestionamos el proceso físico y documental de su carga en los principales
+                    puertos de Chile.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn-primary">Iniciar Coordinación</a>
+                    <a href="#servicios" class="btn-secondary">Ver Cobertura</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="img/puerto-operaciones.jpg" alt="Operaciones Portuarias MIH" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones operativas con trazabilidad completa y soporte en los principales terminales del país.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Gestión Documental</h3>
+                    <p>Tramitación experta de documentos de comercio exterior para importaciones y exportaciones
+                        asegurando cumplimiento normativo.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Plataforma Web</h3>
+                    <p>Informes personalizados en tiempo real, trazabilidad de la carga y repositorio digital de sus
+                        documentos escaneados.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>Supervisión en Puerto</h3>
+                    <p>Control y presencia física rigurosa durante los embarques marítimos y terrestres en la cadena
+                        logística.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Contacte con nuestras oficinas</h2>
+                <p>Estamos presentes en los nodos clave del comercio exterior chileno.</p>
+                <div class="info-item">
+                    <strong>Casa Matriz:</strong> Almirante Señoret 70, Oficina 51, Valparaíso - Chile.
+                </div>
+                <div class="info-item">
+                    <strong>Teléfono:</strong> 032-3423242
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="async-contact-form" class="minimal-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Nombre completo</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Correo electrónico corporativo</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Detalle de su requerimiento / Puerto de operación</label>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Agencia de Embarques MIH Spa. Todos los derechos reservados.</p>
+        </div>
+    </footer class="main-footer">
+
+</body>
+
+</html>
