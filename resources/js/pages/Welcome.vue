@@ -36,7 +36,44 @@ onMounted(() => {
 </script>
 
 <template>
-    <Head title="Agencia de Embarques MIH | Comercio Exterior & Operaciones Portuarias" />
+    <Head>
+        <title>Agencia de Embarques MIH | Comercio Exterior & Operaciones Portuarias</title>
+        <meta name="description" content="Agencia de Embarques MIH SpA. Coordinación física y documental con precisión exacta. Operaciones aduaneras, portuarias y logísticas en Valparaíso y todo Chile." />
+        <meta name="keywords" content="agencia de embarques, comercio exterior, operaciones portuarias, aduanas, logística, Valparaíso, Chile, MIH, Agentes de Aduana, SAG" />
+        
+        <!-- Open Graph / Redes Sociales -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mih.cl/" />
+        <meta property="og:title" content="Agencia de Embarques MIH | Operaciones Portuarias" />
+        <meta property="og:description" content="Supervisamos el flujo crítico documental y de terreno en los principales terminales de Chile, mitigando sobreestadías y garantizando trazabilidad total." />
+        <meta property="og:image" content="https://mih.cl/img/logo-black.svg" />
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agencia de Embarques MIH | Logística y Aduanas" />
+        <meta name="twitter:description" content="Coordinación física y documental con precisión exacta para el comercio exterior en Chile." />
+        <meta name="twitter:image" content="https://mih.cl/img/logo-black.svg" />
+
+        <!-- Datos Estructurados JSON-LD (SEO Local Business) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LogisticsService",
+          "name": "Agencia de Embarques MIH SpA",
+          "image": "https://mih.cl/img/logo-black.svg",
+          "url": "https://mih.cl",
+          "telephone": "+56 32 342 3242",
+          "email": "contacto@mih.cl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Almirante Señoret 70",
+            "addressLocality": "Valparaíso",
+            "addressCountry": "CL"
+          },
+          "description": "Servicios de coordinación logística, aduanera y operaciones portuarias en Chile."
+        }
+        </script>
+    </Head>
 
     <div class="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 font-sans antialiased selection:bg-[#f59d02] selection:text-slate-900 transition-colors duration-300"
          style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #cbd5e1 1px; --tw-gradient-to: transparent 1px; background-size: 32px 32px;"
@@ -70,6 +107,7 @@ onMounted(() => {
             </div>
         </header>
 
+        <main>
         <section class="relative bg-white dark:bg-slate-950 pt-24 pb-24 lg:pt-36 lg:pb-36 overflow-hidden border-b border-slate-300 dark:border-slate-700 transition-colors duration-300">
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,157,2,0.08),transparent_50%)]"></div>
 
@@ -292,6 +330,7 @@ onMounted(() => {
 
             </div>
         </section>
+        </main>
 
                 <footer class="bg-white dark:bg-slate-950/60 py-12 text-xs border-t-2 border-slate-300 dark:border-slate-700 transition-colors duration-300">
             <div class="mx-auto max-w-7xl px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
