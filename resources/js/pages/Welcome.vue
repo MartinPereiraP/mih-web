@@ -406,7 +406,7 @@ onMounted(() => {
             <div class="mx-auto max-w-7xl px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
                     <span class="font-bold tracking-tight">MIH</span>
-                    <span class="text-slate-600 dark:text-slate-300 font-medium">| Agencia de Embarques MIH SpA</span>
+                    <span class="text-slate-600 dark:text-slate-300 font-medium">| &copy; 2016 - {{ new Date().getFullYear() }} Agencia de Embarques MIH.</span>
                 </div>
                 
                 <!-- NUEVO: Enlaces Legales (Ley 21.719) -->
@@ -416,7 +416,6 @@ onMounted(() => {
                         <span>&bull;</span>
                         <button type="button" @click="activeModal = 'privacy'" class="hover:text-[#f59d02] transition-colors cursor-pointer">Política de Privacidad (Ley 21.719)</button>
                     </div>
-                    <p class="font-bold text-slate-600 dark:text-slate-300">&copy; {{ new Date().getFullYear() }} Agencia de Embarques MIH.</p>
                 </div>
             </div>
         </footer>
