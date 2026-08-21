@@ -116,13 +116,13 @@ onMounted(() => {
 
             <div class="mx-auto max-w-7xl px-6 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center relative z-10">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 rounded-full border border-dashed border-slate-300 dark:border-slate-700 bg-white/40 dark:bg-white/5 backdrop-blur-md px-3 py-1 text-[11px] font-mono font-semibold tracking-wide text-slate-600 dark:text-slate-300 shadow-sm">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-dashed border-[#f59d02]/40 bg-[#f59d02]/5 backdrop-blur-md px-3 py-1 text-[11px] font-mono font-semibold tracking-wide text-[#f59d02] shadow-sm">
                         <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         Soporte Operativo Activo · Nodos Portuarios
                     </div>
                     <h1 class="text-5xl font-semibold tracking-tighter sm:text-6xl xl:text-[76px] leading-[1.05] text-slate-900 dark:text-white">
                         Precisión documental.<br/>
-                        <span class="text-slate-400 dark:text-slate-500">Ejecución perfecta.</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f59d02] to-amber-400">Ejecución perfecta.</span>
                     </h1>
                     <p class="text-lg sm:text-xl text-slate-500 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed tracking-tight">
                         Supervisamos el flujo crítico documental y logístico en los principales terminales de Chile, mitigando sobreestadías con trazabilidad absoluta.
@@ -168,7 +168,7 @@ onMounted(() => {
                             </div>
 
                             <div class="pt-2">
-                                <a href="/login" class="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/40 py-3.5 text-[12px] font-mono font-bold text-slate-500 dark:text-slate-400 hover:text-[#f59d02] dark:hover:text-[#f59d02] hover:border-[#f59d02]/50 dark:hover:border-[#f59d02]/50 transition-all shadow-sm">
+                                <a href="/login" class="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-[#f59d02]/30 dark:border-[#f59d02]/20 bg-[#f59d02]/5 dark:bg-[#f59d02]/5 py-3.5 text-[12px] font-mono font-bold text-[#f59d02] hover:text-[#f59d02] hover:bg-[#f59d02]/10 hover:border-[#f59d02]/60 transition-all shadow-sm">
                                     <svg class="h-4 w-4 text-[#f59d02]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                     </svg>
@@ -247,7 +247,7 @@ onMounted(() => {
                     <div class="relative overflow-hidden bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
                         <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #64748b 1px; --tw-gradient-to: transparent 1px; background-size: 24px 24px;"></div>
                         <div class="relative z-10">
-                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
+                        <div class="h-12 w-12 rounded-2xl bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] shadow-sm border border-[#f59d02]/20 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
@@ -262,7 +262,7 @@ onMounted(() => {
                     <div class="relative overflow-hidden bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
                         <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #64748b 1px; --tw-gradient-to: transparent 1px; background-size: 24px 24px;"></div>
                         <div class="relative z-10">
-                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
+                        <div class="h-12 w-12 rounded-2xl bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] shadow-sm border border-[#f59d02]/20 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                             </svg>
@@ -277,7 +277,7 @@ onMounted(() => {
                     <div class="relative overflow-hidden bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-slate-200/50 dark:border-white/10 rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_20px_40px_rgb(0,0,0,0.2)]">
                         <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(var(--tw-gradient-stops)); --tw-gradient-from: #64748b 1px; --tw-gradient-to: transparent 1px; background-size: 24px 24px;"></div>
                         <div class="relative z-10">
-                        <div class="h-12 w-12 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center text-slate-900 dark:text-white shadow-sm border border-slate-100 dark:border-white/10 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
+                        <div class="h-12 w-12 rounded-2xl bg-[#f59d02]/10 flex items-center justify-center text-[#f59d02] shadow-sm border border-[#f59d02]/20 transition-colors group-hover:bg-[#f59d02] group-hover:text-white group-hover:border-[#f59d02]">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z" />
                             </svg>
