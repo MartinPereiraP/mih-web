@@ -4,11 +4,13 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 
 ## [Sin liberar]
 ### Añadido
+- **Web:** Nueva pantalla de "Sitio en Mantenimiento" implementada en la página principal, simplificando la interfaz para indicar mejoras en progreso en la plataforma.
 - **Navegación Vertical:** Botón flotante dinámico de *Scroll-to-Top* para facilitar el retorno al inicio en la *landing page*.
 - **Cobertura Aduanera:** Se incorporaron los puertos y pasos fronterizos de Arica (Chacalluta), Talcahuano, San Vicente, Lirquén, Coronel y Cardenal Samoré en el footer de la plataforma.
 - **Grilla Fotográfica Multimodal:** Nueva galería tipo *Masonry* en la sección Operaciones, con imágenes exclusivas para los tráficos Marítimo, Terrestre y Aéreo.
 
 ### Cambiado
+- **Core:** Ajustada la versión requerida de PHP en `composer.json` de 8.3 a 8.2 (incluyendo la configuración en `platform`) para garantizar compatibilidad estricta con el entorno del servidor.
 - **Animaciones UI:** Refactorización de las transiciones CSS de los modales legales. Se suavizó la curva de animación (*cubic-bezier*) y se ajustó la posición de aparición hacia el marco superior de la pantalla.
 - **Ajustes de Layout:** Se redujo el margen superior de la sección principal (Hero) para acercar el contenido al Header y eliminar el exceso de espacio en blanco.
 - **Diseño de Footer:** Se consolidó la firma de Copyright y el año de fundación (2016) en el bloque principal del isotipo, eliminando redundancias visuales en el área de enlaces legales.
