@@ -8,6 +8,8 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 - **Navegación Vertical:** Botón flotante dinámico de *Scroll-to-Top* para facilitar el retorno al inicio en la *landing page*.
 - **Cobertura Aduanera:** Se incorporaron los puertos y pasos fronterizos de Arica (Chacalluta), Talcahuano, San Vicente, Lirquén, Coronel y Cardenal Samoré en el footer de la plataforma.
 - **Grilla Fotográfica Multimodal:** Nueva galería tipo *Masonry* en la sección Operaciones, con imágenes exclusivas para los tráficos Marítimo, Terrestre y Aéreo.
+- **Respaldo UI:** Agregada copia de seguridad (`Welcome.original.vue`) de la versión completa de la *Landing Page* para resguardar la arquitectura, copy y componentes visuales originales frente al modo mantenimiento.
+
 
 ### Cambiado
 - **Core:** Ajustada la versión requerida de PHP en `composer.json` de 8.3 a 8.2 (incluyendo la configuración en `platform`) para garantizar compatibilidad estricta con el entorno del servidor.
